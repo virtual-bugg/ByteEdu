@@ -188,7 +188,9 @@ footer img{
     grid-column: 4;
     grid-row: 1;
 }
-
+div.refer{
+    font-size: small;
+}
 .refer
 {
     margin-top: 30px;
