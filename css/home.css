@@ -164,13 +164,16 @@ footer
 }
 .foot
 {
-    position: absolute;
-    bottom: 0px;
+    /* position: absolute;
+    bottom: 0px; */
+    background: rgba(46, 45, 45, 0.219);
+
     width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
 }
-footer img{
+.foot img{
 
     width: 50px;
     height: 50px;
