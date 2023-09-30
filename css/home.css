@@ -189,13 +189,14 @@ footer img{
     grid-row: 1;
 }
 
-    .refer
-    {
-        margin-top: 30px;
-        height:300px;
-        width:250px;
-        color:rgba(0, 0, 0, 0.445)
-    }
+.refer
+{
+    margin-top: 30px;
+    height:300px;
+    width:250px;
+    color:rgba(0, 0, 0, 0.445);
+    font-size: small;
+}
 
 center
 {
