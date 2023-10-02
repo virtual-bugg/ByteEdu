@@ -8,7 +8,7 @@ font-family: 'Montserrat', sans-serif;
 
 }
 
-img{
+.home-image{
     width : 40%;
     /* float: right;
     margin:100px; */
@@ -19,14 +19,7 @@ a
     text-decoration: none;
 }
 
-/* .intro
-{
-    position:absolute;
-    padding: 5rem;
-    margin:100px;
-    display: block;
-    z-index: -1;
-} */
+
 h1{
     font-size: 50px;
 }
@@ -121,7 +114,13 @@ span
 {
     height: 100vh;
    display: flex;
-   align-content: center;
+   justify-content: center;
+   align-items:center;
+}
+.login-img
+{
+    width: 500px;
+    height: 400px;   
 }
 input
 {
