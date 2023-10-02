@@ -10,8 +10,8 @@ font-family: 'Montserrat', sans-serif;
 
 img{
     width : 40%;
-    float: right;
-    margin:100px;
+    /* float: right;
+    margin:100px; */
     }
 a
 {
@@ -19,14 +19,14 @@ a
     text-decoration: none;
 }
 
-.intro
+/* .intro
 {
     position:absolute;
     padding: 5rem;
     margin:100px;
     display: block;
     z-index: -1;
-}
+} */
 h1{
     font-size: 50px;
 }
@@ -54,6 +54,9 @@ span
 .home
 {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .wrapper
 {
