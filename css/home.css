@@ -7,13 +7,7 @@ font-family: 'Montserrat', sans-serif;
     margin: 0%;
 
 }
-.logo
-{
-    width: 70px;
-    padding: 10px;
-    margin: 0%;
 
-}
 img{
     width : 40%;
     float: right;
@@ -24,27 +18,7 @@ a
     margin: 1rem;
     text-decoration: none;
 }
-nav
-{
-    width: 100%;
-    height:70px;
-    background-color: #d8e8fb;
-    position: fixed;
-    }
-.d1
-{   
-    float: left;
-    display: flex;
-    align-items: center;
-    font-size: larger;
-    
-}
 
-.d2
-{
-    float: right;
-    padding: 10px;
-}
 .intro
 {
     position:absolute;
@@ -72,9 +46,7 @@ button, .button
     box-shadow: 5px 5px 5px rgba(116, 114, 114, 0.281);
     background: linear-gradient(17deg, #1332de, #2243ffab);   
 }
-.join{
-    padding: 8px;
-}
+
 span
 {
     color: rgba(255, 255, 255, 0.884);
@@ -157,56 +129,3 @@ input
     padding-left: 15px;
 }
 
-footer
-{
-    background: rgba(46, 45, 45, 0.219);
-    width: 100%;
-    position: relative;
-    padding-bottom: 20px;
-}
-.foot
-{
-    /* position: absolute;
-    bottom: 0px; */
-    background: rgba(46, 45, 45, 0.219);
-
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-}
-.foot img{
-
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-    }
-
-.refer-div
-{
-    width:100%;
-     grid-template-columns: repeat(4, 1fr);
-    display: flex;
-    justify-content: space-evenly;
-}
-.four{
-    grid-column: 4;
-    grid-row: 1;
-}
-div.refer{
-    font-size: small;
-}
-.refer
-{
-    margin-top: 30px;
-    height:300px;
-    width:250px;
-    color:rgba(0, 0, 0, 0.445);
-    font-size: small;
-}
-
-center
-{
-    font-size: small;
-    color:rgba(0, 0, 0, 0.432)
-}
