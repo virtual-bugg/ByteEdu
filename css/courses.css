@@ -99,3 +99,14 @@ button
     color:white;
     border: none;
 }
+
+:hover.white
+{
+    background :none;;
+    color:#d8e8fba6;
+}
+:hover.light-button-hover
+{
+    background: none;
+    color: #1335de79;;
+}
