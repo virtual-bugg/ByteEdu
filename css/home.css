@@ -13,11 +13,12 @@ font-family: 'Montserrat', sans-serif;
     /* float: right;
     margin:100px; */
     }
-a
+nav a
 {
     margin: 1rem;
     text-decoration: none;
     color: #1335deb7;
+    font-size: large;
 
 }
 

@@ -9,7 +9,6 @@ margin: 0px;
     width: 70px;
     padding: 10px;
     margin: 0%;
-
 }
 a
 {
@@ -24,7 +23,7 @@ nav
     height:70px;
     background-color: #d8e8fb;
     position: fixed;
-    font-size: 20px;
+    font-size: large;
     box-shadow: 5px 5px 10px rgba(36, 35, 35, 0.11);
     }
 
@@ -33,7 +32,7 @@ nav
         float: left;
         display: flex;
         align-items: center;
-        font-size: larger;
+        font-size: xx-large;
         
     }
     
