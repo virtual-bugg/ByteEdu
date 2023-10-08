@@ -82,13 +82,20 @@ a div:hover{
 }
 
 /* program-page css */
+.cover{
+    padding: 20px;
+    background: white;
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+}
 
 .heading{
     background:#203fda;
     color:#d8e8fb;
     border-radius:10px;
     width: 100%;
-    margin:20px;
+    /* margin:20px; */
     padding:10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.219);
     position: fixed;
