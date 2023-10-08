@@ -83,19 +83,22 @@ a div:hover{
 
 /* program-page css */
 .cover{
-    padding: 20px;
+    padding-top: 20px;
     background: white;
     width: 100%;
     height: fit-content;
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .heading{
     background:#203fda;
     color:#d8e8fb;
     border-radius:10px;
-    width: 100%;
-    /* margin:20px; */
+    width: 95%;
+    margin: 0 auto;
     padding:10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.445);
    
