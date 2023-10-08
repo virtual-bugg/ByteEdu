@@ -97,8 +97,7 @@ a div:hover{
     width: 100%;
     /* margin:20px; */
     padding:10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.219);
-    position: fixed;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.445);
    
 }
 .code{
