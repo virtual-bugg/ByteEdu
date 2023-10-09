@@ -117,9 +117,9 @@ h1{
 .code pre,.output pre{
     
 font-family: 'Source Code Pro', monospace;
-font-weight:600;
-font-size: 18px;
-color:rgba(0, 0, 0, 0.664);
+font-weight:500;
+/* font-size: 18px; */
+color:rgb(0, 0, 0);
     background:#d8e8fb;
     border-radius:10px;
     margin:20px;
