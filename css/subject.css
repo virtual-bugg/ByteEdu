@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,500;1,700&family=Handjet:wght@600&family=IBM+Plex+Mono:wght@500&family=Manrope:wght@300&family=Montserrat:wght@600&family=Source+Code+Pro&family=Ubuntu+Condensed&display=swap');
 *{
     margin: 0px;
 }
@@ -110,13 +111,19 @@ a div:hover{
     height: fit-content;
     width: 100%;   
 }
-
-
+h1{
+    color:rgba(0, 0, 0, 0.24);
+}
 .code pre,.output pre{
+    
+font-family: 'Source Code Pro', monospace;
+font-weight:600;
+font-size: 18px;
+color:rgba(0, 0, 0, 0.664);
     background:#d8e8fb;
     border-radius:10px;
     margin:20px;
-    overflow-x: scroll;
+    overflow-x: scroll;  
 }
 .output pre{  
     background: rgba(128, 128, 128, 0.253);
