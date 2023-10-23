@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array handling in php</title>
+  <link rel="stylesheet" href="../../css/material.css">
+</head>
+<body>
+  <h2>Creating Arrays</h2>
+  <p>Arrays can be created using the `array()` constructor or the `[]` shortcut syntax.</p>
+  <em>
+  <pre>
+    // Using the array() constructor
+    $array1 = array(1, 2, 3);
+  
+    // Using the [] shortcut syntax
+    $array2 = [1, 2, 3];
+    </pre>
+  </em>
+
+  <h2>Accessing Array Elements</h2>
+  <p>Array elements can be accessed using their index. The first element in an array has an index of 0. The second element has an index of 1, and so on.</p>
+  <em>
+  <pre>
+    $array = [1, 2, 3];
+  
+    echo $array[0]; // Prints 1
+    echo $array[1]; // Prints 2
+    echo $array[2]; // Prints 3
+    </pre>
+  </em>
+
+  <h2>Multidimensional Arrays</h2>
+  <p>Multidimensional arrays are arrays that contain other arrays. Multidimensional arrays can be created using the `array()` constructor or the `[]` shortcut syntax.</p>
+  <em>
+  <pre>
+    // Using the array() constructor
+    $array1 = array(
+      array(1, 2, 3),
+      array(4, 5, 6),
+      array(7, 8, 9)
+    );
+  
+    // Using the [] shortcut syntax
+    $array2 = [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9]
+    ];
+    </pre>
+    
+  </em>
+  <h2>Inspecting Arrays</h2>
+  <p>The `print_r()` function can be used to print the contents of an array.</p>
+  <em>
+  <pre>
+    $array = [1, 2, 3];
+  
+    print_r($array);
+    </pre>
+  </em>
+  <p>The above code will print the following output:</p>
+  <pre>
+    Array
+    (
+      [0] => 1
+      [1] => 2
+      [2] => 3
+    )
+    </pre>
+
+  <h2>Deleting from Arrays</h2>
+  <p>The `unset()` function can be used to delete elements from an array.</p>
+  <em>
+  <pre>
+    $array = [1, 2, 3];
+  
+    unset($array[1]);
+  
+    print_r($array);
+    </pre>
+  </em>
+  <p>The above code will print the following output:</p>
+  <pre>
+  Array
+  (
+    [0] => 1
+    [2] => 3
+  )
+  </pre>
+
+  <h2>Iterating with each() and foreach()</h2>
+  <p>The `each()` and `foreach()` statements can be used to iterate over the elements in an array.</p>
+  <em>
+  <pre>
+    // Using the each() statement
+    $array = [1, 2, 3];
+  
+    while ($element = each($array)) {
+      echo $element['key'] . " => " . $element['value'] . "\n";
+    }
+  
+    // Using the foreach() statement
+    foreach ($array as $key => $value) {
+      echo $key . " => " . $value . "\n";
+    }
+      </pre>
+  </em>
+  <p>The above code will print the following output:</p>
+  <pre>
+  0 => 1
+  1 => 2
+  2 => 3
+  </pre>
+
+  <h2>Iterative functions: current(), next(), prev(), reset(), end()</h2>
+  <p>The `current()`, `next()`, `prev()`, `reset()`, and `end()` functions can be used to control the iteration of an array.</p>
+  <em>
+  <pre>
+    $array = [1, 2, 3];
+  
+    echo current($array); // Prints 1
+    next($array);
+    echo current($array); // Prints 2
+    prev($array);
+    echo current($array); // Prints 1
+    reset($array);
+    echo current($array); // Prints 1
+    end($array);
+    echo current($array); // Prints 3
+    </pre>
+  </em>
+</body>
+</html>

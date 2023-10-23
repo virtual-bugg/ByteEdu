@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions in Php</title>
+  <link rel="stylesheet" href="../../css/material.css">
+</head>
+
+<body>
+  <h2>Function Definition</h2>
+  <p>A function is a block of code that can be reused multiple times. Functions are defined using the following syntax:</p>
+  <em>
+  <pre>
+    function function_name($parameter1, $parameter2, ...) {
+      // Code to execute
+    }      </pre>
+  </em>
+  <p>The `function_name` is the name of the function. The `parameters` are variables that are passed to the function. The `code to execute` is the code that is executed when the function is called.</p>
+
+  <h2>Creating and Invoking User-Defined Functions</h2>
+  <p>To create a user-defined function, simply define the function using the syntax above. To invoke a user-defined function, simply use the function name followed by parentheses.</p>
+  <em>
+  <pre>
+    function add_numbers($number1, $number2) {
+      return $number1 + $number2;
+    }
+  
+    $result = add_numbers(1, 2);      </pre>
+  </em>
+  <p>In the above example, the `add_numbers()` function is defined. The function takes two parameters, `$number1` and `$number2`. The function returns the sum of the two parameters. The `$result` variable is then assigned the value of the `add_numbers()` function.</p>
+
+  <h2>Formal Parameters versus Actual Parameters</h2>
+  <p>Formal parameters are the parameters that are defined in the function definition. Actual parameters are the values that are passed to the function when it is invoked.</p>
+  <em>
+  <pre>
+    function add_numbers($number1, $number2) {
+      return $number1 + $number2;
+    }
+  
+    add_numbers(1, 2);    </pre>
+  </em>
+  <p>In the above example, the formal parameters are `$number1` and `$number2`. The actual parameters are `1` and `2`.</p>
+
+  <h2>Function and Variable Scope</h2>
+  <p>Function scope is the set of variables that are visible to a function. Variable scope is the set of variables that are visible to a particular piece of code.</p>
+  <em>
+  <pre>
+    $global_variable = 1;
+  
+    function my_function() {
+      $local_variable = 2;
+  
+      echo $global_variable; // Prints 1
+      echo $local_variable; // Prints 2
+    }
+  
+    my_function();
+  
+    echo $global_variable; // Prints 1
+    echo $local_variable; // Prints undefined      </pre>
+  </em>
+  <p>In the above example, the `$global_variable` variable is a global variable. The `$local_variable` variable is a local variable. The `global_variable` variable is visible to both the `my_function()` function and the global scope. The `local_variable` variable is only visible to the `my_function()` function.</p>
+
+  <h2>Recursion</h2>
+  <p>Recursion is a technique where a function calls itself. Recursive functions can be used to solve problems that can be broken down into smaller subproblems.</p>
+  <em>
+  <pre>
+    function factorial($number) {
+      if ($number == 0) {
+        return 1;
+      } else {
+        return $number * factorial($number - 1);
+      }
+    }
+  
+    $factorial_of_5 = factorial(5);      </pre>
+  </em>
+  <p>In the above example, the `factorial()` function is a recursive function. The function calculates the factorial of a number. The factorial of a number is the product of all the positive integers less than or equal to the number.</p>
+
+  <h2>Library Functions</h2>
+  <p>PHP provides a number of built-in library functions. Library functions are functions that are provided by the PHP language. Some common library functions include:</p>
+  <ul>
+    <li>strlen() - Returns the length of a string</li>
+    <li>strtoupper() - Converts a string to uppercase</li>
+    <li>strtolower() - Converts a string to lowercase</li>
+    <li>rand() - Generates a random number</li>
+    <li>sqrt() - Calculates the square root of a number</li>
+  </ul>
+
+  <h2>Variable-length Argument Lists</h2>
+  <p>Variable-length argument lists are functions that can take any number of arguments. Variable-length argument lists are defined using the `...` operator.</p>
+  <em>
+  <pre>
+    function sum_numbers(...) {
+      $sum = 0;
+  
+      foreach ($arguments as $argument) {
+        $sum += $argument;
+      }
+  
+      return $sum;
+    }
+  
+    $result = sum_numbers(1, 2, 3, 4, 5);    </pre>
+  </em>
+
+  <h2>Default Parameter Values</h2>
+  <p>Default parameter values are values that are assigned to parameters if no value is passed to the function. Default parameter values are defined using the `=` operator.</p>
+ <em>
+  <pre>
+    function say_hello($name = "John Doe") {
+      echo "Hello, $name!";
+    }
+  
+    say_hello();    </pre>
+ </em>
+
+  <h2>Anonymous Functions</h2>
+  <p>Anonymous functions are functions that do not have a name. Anonymous functions are defined using the `fn` keyword.</p>
+ <em>
+  <pre>
+    $fn = fn($number) => $number * 2;
+  
+    $result = $fn(2);    </pre>  
+ </em>
+  
+
+  </body>
+  </html>

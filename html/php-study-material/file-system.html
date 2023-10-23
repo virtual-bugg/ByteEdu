@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Working With Filesystems in php</title>
+  <link rel="stylesheet" href="../../css/material.css">
+</head>
+<body>
+  <h2>Working with File System: Understanding PHP file permissions</h2>
+  <p>
+    PHP file permissions are used to control who can access and modify files. File permissions are represented by a three-digit octal number. The first digit represents the permissions for the owner of the file, the second digit represents the permissions for the group of the file, and the third digit represents the permissions for everyone else.
+  </p>
+  <p>
+    The following table shows the possible permissions for each digit:
+  </p>
+  <table>
+    <tr>
+      <th>Digit</th>
+      <th>Permission</th>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>No permission</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Execute permission</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Write permission</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Write and execute permission</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Read permission</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Read and execute permission</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Read and write permission</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Read, write, and execute permission</td>
+    </tr>
+  </table>
+  <p>
+    For example, the file permission `644` would give the owner read and write permission, the group read permission, and everyone else read permission.
+  </p>
+
+  <h2>Opening and closing a file</h2>
+  <p>
+    The `fopen()` function is used to open a file. The `fopen()` function takes two arguments: the name of the file to open and the mode in which to open the file.
+  </p>
+  <em>
+  <pre>
+    $file = fopen("myfile.txt", "r");    </pre>
+  </em>
+  <p>
+    The `r` mode opens the file for reading. Other possible modes include:
+  </p>
+  <ul>
+    <li>w - Opens the file for writing. If the file does not exist, it will be created.</li>
+    <li>a - Opens the file for appending. If the file does not exist, it will be created.</li>
+    <li>r+ - Opens the file for reading and writing.</li>
+    <li>w+ - Opens the file for writing and truncates the file to zero length. If the file does not exist, it will be created.</li>
+    <li>a+ - Opens the file for appending and reading.</li>
+  </ul>
+  <p>
+    The `fclose()` function is used to close a file.
+  </p>
+  <em>
+  <pre>
+    fclose($file);   </pre>
+  </em>
+
+  <h2>File reading and writing functions</h2>
+  <p>
+    The `fread()` function is used to read data from a file. The `fread()` function takes two arguments: the file to read from and the number of bytes to read.
+  </p>
+  <em>
+  <pre>
+    $data = fread($file, 1024);  </pre>
+  </em>
+  <p>
+    The `fwrite()` function is used to write data to a file. The `fwrite()` function takes three arguments: the file to write to, the data to write, and the number of bytes to write.
+  </p>
+  <em>
+  <pre>
+    fwrite($file, "Hello, world!");      </pre>    
+  </em>
+  <h2>File system and directory functions</h2>
+  <p>
+    The `mkdir()` function is used to create a directory. The `mkdir()` function takes one argument: the name of the directory to create.
+  </p>
+ <em>
+  <pre>
+    mkdir("mydirectory");</pre>
+ </em>
+  <p>
+    The `rmdir()` function is used to remove a directory. The `rmdir()` function takes one argument: the name of the directory to remove.
+  </p>
+ <em>
+  <pre>
+    rmdir("mydirectory");</pre>
+ </em>
+  <p>
+    The `unlink()` function is used to delete a file. The `unlink()` function takes one argument: the name of the file to delete.
+  </p>
+ <em>
+  <pre>
+    unlink("myfile.txt");    </pre>
+ </em>
+  </body>
+  </html>

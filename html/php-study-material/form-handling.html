@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form handling in php</title>
+  <link rel="stylesheet" href="../../css/material.css">
+</head>
+<body>
+  <h2>Working with HTML Form Controls and PHP</h2>
+  <p>HTML form controls can be used to collect user input. The user input can then be accessed in PHP using super global variables.</p>
+
+  <h2>Super Global Variables</h2>
+  <p>Super global variables are variables that are available in all scopes throughout a PHP script.</p>
+
+  <p>The following are the super global variables that are used for form handling:</p>
+  <ul>
+    <li>$_GET</li>
+    <li>$_POST</li>
+    <li>$_REQUEST</li>
+  </ul>
+
+  <h2>Super Global Array</h2>
+  <p>The super global array is an associative array that contains the values of all form controls.</p>
+
+  <p>The following are the keys in the super global array:</p>
+  <ul>
+    <li>name</li>
+    <li>value</li>
+    <li>type</li>
+  </ul>
+
+  <h2>Importing User Input</h2>
+  <p>User input can be imported into PHP using the `$_GET`, `$_POST`, or `$_REQUEST` super global variables.</p>
+
+  <p>The `$_GET` super global variable is used to import user input that is submitted using the `GET` method.</p>
+
+  <p>The `$_POST` super global variable is used to import user input that is submitted using the `POST` method.</p>
+
+  <p>The `$_REQUEST` super global variable is used to import user input that is submitted using either the `GET` or `POST` method.</p>
+
+  <h2>Accessing User Input</h2>
+  <p>User input can be accessed using the following syntax:</p>
+  <em>
+    <pre>
+      $_GET['name']
+      $_POST['name']
+      $_REQUEST['name']      </pre>
+    
+  </em>
+  <p>For example, if the following form is submitted:</p>
+  <em>
+    <pre>
+    &lt;form method="GET" action="">
+    &lt;input type="text" name="name" value="John Doe">
+    &lt;input type="submit" value="Submit">
+    &lt;/form>
+        </pre>
+  </em>
+
+  <p>The user input can be accessed using the following code:</p>
+  <em>
+  <pre>
+    $name = $_GET['name'];
+  
+    echo $name; // Prints John Doe
+    </pre>
+  </em>
+</body>
+</html>

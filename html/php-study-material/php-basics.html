@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Php Basics</title>
+    <link rel="stylesheet" href="../../css/material.css">
+</head>
+<body>
+    <h2>PHP Basics: </h2>
+    <p>PHP is quite a simple language with roots in C and Perl, yet it looks more like Java. It
+        is also very flexible, but there are a few rules that you need to learn about its syntax and
+        structure.</p>
+    <h2>Tokens</h2>
+    <pre>
+Tokens in PHP are the basic building blocks of PHP code. They are the smallest units of code that are recognized by the PHP parser.Tokens can be anything from a single character, such as a semicolon, to a complete statement, such as an echo statement.
+
+Tokens are divided into two categories:
+
+<b>- Keywords:</b> Keywords are reserved words that have special meaning to the PHP parser. Examples of keywords include if, else, while, and for.
+<b>- Symbols:</b> Symbols are characters or sequences of characters that represent operators, punctuation marks, and other special characters. Examples of symbols include +, -, *, /, =, and (, ), and {, }.
+
+When the PHP parser encounters a token, it determines the type of token and its meaning. The parser then uses this information to generate a parse tree, which is a representation of the PHP code in a structured format.
+    </pre>
+    <h2>Variables</h2>
+    <pre>
+To declare a variable in PHP, you simply assign it a value. Variable names in PHP are represented by a 
+dollar sign ($) followed by an identifier that begins with either a letter or underscore, which in turn can be followed by any number of underscores, numbers, or letters. 
+
+Variables are used to store data, like string of text, numbers, etc. Variable values can change over the course of a script. Here're some important things to know about variables:
+    - In PHP, a variable does not need to be declared before adding a value to it.
+    - PHP automatically converts the variable to the correct data type, depending on its value.
+    - After declaring a variable it can be reused throughout the code.
+    - The assignment operator (=) used to assign value to a variable.
+
+<b>In PHP variable can be declared as: $var_name = value;</b>
+
+<em>&lt;?php
+ $varname = "moo";                 // ok
+$var______Name = "oink";        // ok
+$__12345var = 12345;              // ok
+$12345__var = 12345;             // NOT ok - starts with number
+?>
+</em>
+    </pre>
+<h2>Variable Scope</h2>
+<pre>
+Variable scope in PHP refers to the visibility or accessibility of variables within a particular context. Understanding the concept of scope is important for writing effective and efficient PHP code that is easy to maintain and debug.
+
+There are three types of variable scopes in PHP:
+    <b>- Local scope:</b>  A variable declared within a function has a LOCAL SCOPE and can only be accessed within that function:.
+    <b>- Global scope:</b>  A variable declared outside a function has a GLOBAL SCOPE and can only be accessed outside a function:
+    <b>- Static scope:</b>  Normally, when a function is completed/executed, all of its variables are deleted. However, sometimes we want a local variable NOT to be deleted. We need it for a further job. To do this, use the static keyword when you first declare the variable. Then, each time the function is called, that variable will still have the information it contained from the last time the function was called.
+Here is an example of the different variable scopes in PHP:
+</pre>
+<h2>Constants</h2>
+<h2>Data Types</h2>
+<h2>number handling in 
+    PHP</h2>
+<h2>operands, operators, expressions & operator precedence</h2>
+<img src="../../images/php/operator-precedence.png" alt="Operator-Precedence">
+<h2>comments</h2>
+    <pre>
+There are two ways in which you can add comments to your PHP code. 
+<b>Single Line Comments</b>
+The first turns a single line into a comment by preceding it with a pair of forward slashes, like this:
+
+<em>// This is a comment</em>
+You can also use this type of comment directly after a line of code to describe its action,
+like this:
+
+<em>$x += 10; // Increment $x by 10 </em>
+<b>Multi-line Comments</b>
+You can use the /* and */ pairs of characters to open and close comments almost
+anywhere you like inside your code. Most, if not all, programmers use this construct to
+temporarily comment out entire sections of code that do not work or that, for one reason
+or another, they do not wish to be interpreted.
+
+<em> &lt;?php
+/* This is a section
+ of multiline comments
+ which will not be
+ interpreted */
+?></em>
+</pre>
+    <h2>echo and Print</h2>
+    
+</body>
+</html>

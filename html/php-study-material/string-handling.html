@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String handling in php</title>
+  <link rel="stylesheet" href="../../css/material.css">
+</head>
+<body>
+  <h2>Interpolation with Curly Braces</h2>
+  <p>String interpolation with curly braces is a way of embedding variables into strings. To use string interpolation with curly braces, simply enclose the variable name in curly braces within a string.</p>
+  <em>
+  <pre>
+    $name = "John Doe";
+    $age = 30;
+  
+    echo "Hello, {$name}! You are {$age} years old.";      </pre>
+  </em>
+  <p>The above code will print the following output:</p>
+  <pre>
+  Hello, John Doe! You are 30 years old.
+  </pre>
+
+  <h2>Characters and String Indexes</h2>
+  <p>Characters in a string can be accessed using their index. The first character in a string has an index of 0. The second character has an index of 1, and so on.</p>
+  <em>
+  <pre>
+    $name = "John Doe";
+  
+    echo $name[0]; // Prints "J"
+    echo $name[3]; // Prints "h"      </pre>
+  </em>
+
+  <h2>String Operators</h2>
+  <p>PHP provides a number of string operators. Some common string operators include:</p>
+  <ul>
+    <li>. (concatenation operator)</li>
+    <li>== (comparison operator)</li>
+    <li>=== (identical comparison operator)</li>
+    <li>!== (not identical comparison operator)</li>
+  </ul>
+  <em>
+  <pre>
+    $string1 = "Hello, ";
+    $string2 = "John Doe!";
+  
+    echo $string1 . $string2; // Prints "Hello, John Doe!"
+    echo $string1 == $string2; // Prints false
+    echo $string1 === $string2; // Prints false      </pre>
+    
+  </em>
+  <h2>Heredoc</h2>
+  <p>Heredoc is a way of creating multi-line strings. To use heredoc, simply enclose the string in a pair of "<<<" and ">>>" symbols. The heredoc syntax can be used to create strings that contain newlines and other special characters.</p>
+  <em>
+  <pre>
+    $name = "John Doe";
+  
+    $string = &lt;&lt;&lt;EOT
+    Hello, $name!
+  
+    How are you today?
+    EOT;
+  
+    echo $string;      </pre>
+  </em>
+  <p>The above code will print the following output:</p>
+  <pre>
+  Hello, John Doe!
+
+  How are you today?
+  </pre>
+
+  <h2>String Functions</h2>
+  <p>PHP provides a number of built-in string functions. Some common string functions include:</p>
+  <ul>
+    <li>strlen() - Returns the length of a string</li>
+    <li>strtoupper() - Converts a string to uppercase</li>
+    <li>strtolower() - Converts a string to lowercase</li>
+    <li>str_replace() - Replaces all occurrences of a string with another string</li>
+    <li>substr() - Returns a substring from a string</li>
+  </ul>
+  <em>
+  <pre>
+    $string = "Hello, world!";
+  
+    echo strlen($string); // Prints 12
+    echo strtoupper($string); // Prints HELLO, WORLD!
+    echo strtolower($string); // prints hello, world!
+    echo str_replace("world", "John Doe", $string); // Prints Hello, John Doe!
+    echo substr($string, 7); // Prints world!      </pre>
+  </em>
+
+  <h2>Formatting Strings</h2>
+  <p>Strings can be formatted using the `printf()` function. The `printf()` function takes a format string as its first argument. The format string can contain placeholders that are replaced with values.</p>
+  <em>
+  <pre>
+    $name = "John Doe";
+    $age = 30;
+  
+    printf("Hello, %s! You are %d years old.", $name, $age);      </pre>
+  </em>
+  <p>The above code will print the following output:</p>
+  <pre>
+  Hello, John Doe! You are 30 years old.
+  </pre>
+
+  <h2>Comparing and Searching Strings and Substrings</h2>
+  <p>Strings can be compared using the `==`, `===`, `!=`, and `!==` operators. Substrings can be searched for using the `strpos()` and `strstr()` functions.</p>
+  <em>
+  <pre>
+    $string1 = "Hello, world!";
+    $string2 = "        </pre>
+  </em>
+    </body>
+    </html>

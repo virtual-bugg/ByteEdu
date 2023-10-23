@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrating Php and Databases</title>
+  <link rel="stylesheet" href="../../css/material.css">
+</head>
+<body>
+  <h2>Connecting to a Database</h2>
+  <p>In order to integrate PHP with a database, you must first connect to the database. This can be done using the `mysqli_connect()` function.</p>
+  <em>
+  <pre>
+    $servername = "localhost";
+    $username = "username";
+    $password = "password";
+    $dbname = "database_name";
+  
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+  
+    if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+    }      </pre>
+    
+  </em>
+  <h2>Making SQL Queries</h2>
+  <p>Once you have connected to a database, you can make SQL queries using the `mysqli_query()` function.</p>
+  <em>
+  <pre>
+    $sql = "SELECT * FROM users";
+  
+    $result = mysqli_query($conn, $sql);
+  
+    if (!$result) {
+      die("Error: " . mysqli_error($conn));
+    }      </pre>
+  </em>
+
+  <h2>Executing Queries</h2>
+  <p>Once you have made an SQL query, you can execute it using the `mysqli_fetch_assoc()` function.</p>
+  <em>
+  <pre>
+    while ($row = mysqli_fetch_assoc($result)) {
+      echo $row["name"] . " " . $row["email"] . "<br>";
+    }      </pre>
+  </em>
+
+  <h2>Fetching Data Sets</h2>
+  <p>The `mysqli_fetch_assoc()` function returns an associative array that contains the results of the query.</p>
+  <em>
+  <pre>
+    $row = mysqli_fetch_assoc($result);
+  
+    echo $row["name"]; // Prints the value of the "name" column
+    echo $row["email"]; // Prints the value of the "email" column      </pre>
+  </em>
+
+  <h2>Integrating Forms and Databases</h2>
+  <p>Forms can be integrated with databases by using the `$_POST` super global variable.</p>
+  <em>
+  <pre>
+    &lt;form method="POST" action="">
+    &lt;input type="text" name="name">
+    &lt;input type="email" name="email">
+    &lt;input type="submit" value="Submit">
+    &lt;/form>
+  
+    &lt;?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $name = $_POST["name"];
+      $email = $_POST["email"];
+  
+      $sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
+  
+      if (mysqli_query($conn, $sql)) {
+        echo "New record created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
+    }
+    ?>      </pre>
+  </em>
+
+  <h2>Basic Form Submission to a Database</h2>
+  <p>The above code shows how to submit data from a form to a database. The `$_POST` super global variable is used to get the values of the form fields. The values are then inserted into the database using the `INSERT INTO` statement.</p>
+
+  <h2>Editing Data with an HTML Form</h2>
+  <p>Data can be edited using an HTML form by using the `UPDATE` statement.</p>
+  <em>
+  <pre>
+    &lt;form method="POST" action="">
+    &lt;input type="hidden" name="id" value="&lt;?php echo $row["id"]; ?>">
+    &lt;input type="text" name="name" value="&lt;?php echo $row["name"]; ?>">
+    &lt;input type="email" name="email" value="&lt;?php echo $row["email"]; ?>">
+    &lt;input type="submit" value="Submit">
+    &lt;/form>
+  
+    &lt;?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $id = $_POST["id"];
+      $name = $_POST["name"];
+      $email = $_POST["email"];
+  
+      $sql = "UPDATE users SET name='$name', email='$email' WHERE id='$id'";
+  
+      if (mysqli_query($conn, $sql)) {
+        echo "Record updated successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
+    }
+    ?>      </pre>
+  </em>
+
+  
+</body>
+</html>

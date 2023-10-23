@@ -35,8 +35,9 @@ box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.158);
     width: 100%;   
     margin:20px;
     border-radius: 20px;
-    background: #d8e8fb;
+    background: #d8e8fba8;
 }
+
 ul{
     padding:0px;
 }
@@ -127,6 +128,7 @@ color:rgb(0, 0, 0);
 }
 .output pre{  
     background: rgba(128, 128, 128, 0.253);
+
 }
 .white{
     font-size: 15px;

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintaining User State in Php</title>
+  <link rel="stylesheet" href="../../css/material.css">
+</head>
+
+<body>
+  <h2>Maintaining User State: Introduction to Cookies</h2>
+  <p>Cookies are small pieces of data that are stored on a user's computer. Cookies can be used to track a user's activity on a website or to store user preferences.</p>
+
+  <h2>Setting time in a cookie with PHP</h2>
+  <p>The `setcookie()` function can be used to set a cookie. The `setcookie()` function takes three arguments: the name of the cookie, the value of the cookie, and the expiration time of the cookie.</p>
+  <em>
+  <pre>
+    setcookie("name", "John Doe", time() + (60 * 60 * 24 * 30));      </pre>
+  </em>
+
+  <h2>Deleting a cookie</h2>
+  <p>The `setcookie()` function can also be used to delete a cookie. To delete a cookie, simply set the expiration time of the cookie to a time in the past.</p>
+  <em>
+  <pre>
+    setcookie("name", "", time() - 3600);      </pre>
+  </em>
+
+  <h2>Creating session cookie</h2>
+  <p>A session cookie is a cookie that is deleted when the user closes their browser. Session cookies can be used to store temporary data, such as the contents of a shopping cart.</p>
+  <em>
+  <pre>
+    session_start();
+    $_SESSION["name"] = "John Doe";      </pre>
+  </em>
+
+  <h2>Introduction to sessions</h2>
+  <p>Sessions are a way of storing user data on the server. Sessions are started by calling the `session_start()` function. Once a session has been started, session variables can be used to store user data.</p>
+
+  <h2>Starting a session</h2>
+  <p>The `session_start()` function must be called at the beginning of every page that needs to access session variables.</p>
+  <em>
+  <pre>
+    session_start();      </pre>
+  </em>
+
+  <h2>Registering Session variables</h2>
+  <p>Session variables can be registered using the `$_SESSION` superglobal variable.</p>
+  <em>
+  <pre>
+    $_SESSION["name"] = "John Doe";      </pre>
+  </em>
+
+  <h2>Working with session variables</h2>
+  <p>Session variables can be accessed using the `$_SESSION` superglobal variable.</p>
+  <em>
+  <pre>
+    echo $_SESSION["name"]; // Prints John Doe      </pre>
+  </em>
+
+  <h2>Destroying session</h2>
+  <p>The `session_destroy()` function can be used to destroy a session.</p>
+  <em>
+  <pre>
+    session_destroy();      </pre>
+  </em>
+
+  <h2>Passing session Ids</h2>
+  <p>Session IDs can be passed in the URL or in a form.</p>
+  <em>
+  <pre>
+    &lt;a href="page.php?PHPSESSID=12345">Page</a>
+    <b>or</b>
+    &lt;form action="page.php" method="post">
+    &lt; input type="hidden" name="PHPSESSID" value="12345">
+    &lt;/form>      </pre>
+  </em>
+
+  <h2>Encoding and decoding session variables</h2>
+  <p>Session variables can be encoded and decoded using the `session_encode()` and `session_decode()` functions.</p>
+  <em>
+  <pre>
+    $encoded_session = session_encode();
+    session_decode($encoded_session);      </pre>
+  </em>
+
+  <h2>Increase session expire time</h2>
+  <p>The `ini_set()` function can be used to increase the session expire time.</p>
+  <em>
+  <pre>
+    ini_set("session.gc_maxlifetime", 3600 * 24 * 30);      </pre>
+  </em>
+
+  <h2>Working of session without cookie</h2>
+  <p>Sessions can also work without cookies. To use sessions without cookies, the `session.use_cookies` setting must be set to `0` in the php.ini file.</p>
+</body>
+</html>
